@@ -1,0 +1,123 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(136, 127, 127);
+}
+
+/* Principal */
+
+.tables {
+    display: flex;
+    max-width: 868px;
+    min-width: 320px;
+    position: absolute; left: 250px; top: 120px;
+}
+
+/* Lluvia */
+.lluvia {
+    color: rgb(12, 216, 12);
+    position: fixed;
+    top: -1vh;
+    font-size: 1.5rem;
+    transform: translateY(0);
+    animation: fall 2s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(105vh);
+    }
+}
+
+/* Columnas */
+
+.columna {
+    color: whitesmoke;
+    padding: 2rem;
+    width: 30%;
+    overflow: hidden;
+    transition: widht .3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.columna.activa {
+    width: 50%;
+}
+
+.columna:first-of-type {
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.columna:last-of-type {
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.amd {
+    background-color:  hsl(31, 77%, 52%);
+}
+
+.intel {
+    background-color: hsl(219, 88%, 37%);
+}
+
+.apple {
+    background-color: hsl(179, 66%, 21%);
+}
+
+
+.title {
+    font-family: 'Lexend Deca', monospace;
+    text-transform: uppercase;
+}
+
+.description {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 14px;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+}
+
+.enlace {
+    font-family: 'Lexend Deca', monospace;
+    background-color: white;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-size: 12px;
+    padding: .5rem 1rem;
+}
+
+.amd .enlace {
+    color:  hsl(31, 77%, 52%);
+}
+
+.intel .enlace {
+    color: hsl(219, 88%, 37%);
+}
+
+.apple .enlace {
+    color: hsl(179, 66%, 21%);
+}
